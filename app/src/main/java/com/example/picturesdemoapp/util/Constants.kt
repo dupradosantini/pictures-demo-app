@@ -10,4 +10,6 @@ object Constants {
 
     const val BASE_URL = "https://api.unsplash.com"
 
+    const val ITEMS_PER_PAGE = 10
+
 }

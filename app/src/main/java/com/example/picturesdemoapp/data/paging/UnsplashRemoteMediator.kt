@@ -9,6 +9,7 @@ import com.example.picturesdemoapp.data.local.UnsplashImageDatabase
 import com.example.picturesdemoapp.data.remote.UnsplashApi
 import com.example.picturesdemoapp.model.UnsplashImage
 import com.example.picturesdemoapp.model.UnsplashRemoteKeys
+import com.example.picturesdemoapp.util.Constants.ITEMS_PER_PAGE
 import javax.inject.Inject
 
 
@@ -49,7 +50,7 @@ class UnsplashRemoteMediator @Inject constructor(
                 }
             }
 
-            val response = unsplashApi.getAllImages(page = currentPage, perPage = 10)
+            val response = unsplashApi.getAllImages(page = currentPage, perPage = ITEMS_PER_PAGE)
             val endOfPaginationReached = response.isEmpty()
 
             val prevPage = if (currentPage == 1) null else currentPage.minus(1)
