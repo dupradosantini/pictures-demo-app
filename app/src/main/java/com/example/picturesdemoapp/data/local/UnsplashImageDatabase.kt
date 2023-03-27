@@ -10,8 +10,8 @@ import com.example.picturesdemoapp.model.UnsplashRemoteKeys
 @Database(entities = [UnsplashImage::class, UnsplashRemoteKeys::class], version = 1)
 abstract class UnsplashImageDatabase: RoomDatabase(){
 
-    abstract fun UnsplashImageDao(): UnsplashImageDao
+    abstract fun unsplashImageDao(): UnsplashImageDao
 
-    abstract fun UnsplashRemoteKeysDao(): UnsplashRemoteKeysDao
+    abstract fun unsplashRemoteKeysDao(): UnsplashRemoteKeysDao
 
 }

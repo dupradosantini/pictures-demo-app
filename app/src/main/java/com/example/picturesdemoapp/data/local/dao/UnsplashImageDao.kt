@@ -11,7 +11,7 @@ import com.example.picturesdemoapp.model.UnsplashImage
 interface UnsplashImageDao {
 
     @Query("SELECT * FROM unsplash_image_table")
-    suspend fun getAllImages(): PagingSource<Int, UnsplashImage>
+    fun getAllImages(): PagingSource<Int, UnsplashImage>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addImages(images: List<UnsplashImage>)
