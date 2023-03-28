@@ -33,9 +33,12 @@ import com.example.picturesdemoapp.model.User
 import com.example.picturesdemoapp.model.UserLinks
 
 @Composable
-fun ListContent(items: LazyPagingItems<UnsplashImage>) {
+fun ListContent(
+    items: LazyPagingItems<UnsplashImage>,
+    modifier: Modifier
+) {
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier.fillMaxSize(),
         contentPadding = PaddingValues(12.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
@@ -57,7 +60,7 @@ fun UnsplashItem(unsplashImage: UnsplashImage) {
             .clickable {
                 val browserIntent = Intent(
                     Intent.ACTION_VIEW,
-                    Uri.parse("https://unsplash.com/@${unsplashImage.user}?utm_source=PicturesDemoApp&utm_medium=referral")
+                    Uri.parse("https://unsplash.com/@${unsplashImage.user.username}?utm_source=PicturesDemoApp&utm_medium=referral")
                 )
                 startActivity(context, browserIntent, null)
             }

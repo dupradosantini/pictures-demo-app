@@ -21,7 +21,9 @@ class MainActivity : ComponentActivity() {
             PicturesDemoAppTheme {
                 // A surface container using the 'background' color from the theme
                 val navController = rememberNavController()
-                SetupNavGraph(navController = navController)
+                SetupNavGraph(
+                    navController = navController
+                )
             }
         }
     }
