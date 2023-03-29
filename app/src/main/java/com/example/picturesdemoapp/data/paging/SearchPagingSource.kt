@@ -4,9 +4,8 @@ import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.picturesdemoapp.data.remote.UnsplashApi
 import com.example.picturesdemoapp.model.UnsplashImage
-import javax.inject.Inject
 
-class SearchPagingSource @Inject constructor(
+class SearchPagingSource(
     private val unsplashApi: UnsplashApi,
     private val query: String
 ): PagingSource<Int, UnsplashImage>() {
