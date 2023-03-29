@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.paging.ExperimentalPagingApi
 import com.example.picturesdemoapp.screens.home.HomeScreen
+import com.example.picturesdemoapp.screens.search.SearchScreen
 
 @Composable
 @ExperimentalPagingApi
@@ -22,7 +23,7 @@ fun SetupNavGraph(
             )
         }
         composable(route = Screen.Search.route){
-            //TODO - SearchScreen(navController = navController)
+            SearchScreen(navController = navController)
         }
     }
 }
